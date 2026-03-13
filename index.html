@@ -3,208 +3,284 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio website for [Your Name]">
-    <title>Portfolio - [Your Name]</title>
+    <meta name="description" content="Professional portfolio website for Charles Hangoma, a software engineering student, operations manager, and Linux enthusiast.">
+    <title>Charles Hangoma | Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!--
-    ============================================================
-    ASSIGNMENT 1: RESPONSIVE PORTFOLIO WEBSITE
-    CSC4035 Web Programming and Technologies
-
-    Instructions:
-    1. Complete all TODO sections below
-    2. Use semantic HTML5 elements
-    3. Ensure all images have alt attributes
-    4. Ensure all form inputs have labels
-    5. Test responsiveness at multiple breakpoints
-    ============================================================
-    -->
-
-    <!-- Navigation -->
-    <header class="header">
-        <nav class="nav">
-            <!-- TODO: Create navigation with links to each section
-                 Requirements:
-                 - Logo/site title
-                 - Navigation links (Home, About, Projects, Contact)
-                 - Mobile-friendly (hamburger menu optional)
-                 - Active state indication
-            -->
-            <div class="nav__logo">
-                <a href="#home">[Your Name]</a>
+    <header class="sidebar">
+        <div class="sidebar__brand">
+            <a href="#home" class="brand-logo">CH</a>
+            <div class="brand-text">
+                <h2>Charles Hangoma</h2>
+                <p>Software Engineer in Progress</p>
             </div>
-            <ul class="nav__menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+        </div>
+
+        <nav class="sidebar__nav" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
+
+       
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <!-- TODO: Create hero section
-                 Requirements:
-                 - Your name (h1)
-                 - Professional tagline
-                 - Call-to-action button
-                 - Consider using Flexbox for layout
-            -->
-            <div class="hero__content">
-                <h1>Your Name</h1>
+    <main class="page-content">
+        <section id="home" class="hero section">
+            <div class="hero__text">
+                <p class="section-label">Welcome</p>
+                <h1>Hello, I’m <span>Charles Hangoma</span></h1>
                 <p class="hero__tagline">
-                    <!-- TODO: Add your professional tagline -->
-                    Web Developer | Designer | Problem Solver
+                    Software Engineering Student, Operations Manager, and Linux Enthusiast building modern, responsive, and user-friendly digital solutions.
                 </p>
-                <a href="#contact" class="btn btn--primary">Get In Touch</a>
+
+                <div class="hero__actions">
+                    <a href="#projects" class="btn btn--primary">View Projects</a>
+                    <a href="#contact" class="btn btn--outline">Get In Touch</a>
+                </div>
+
+                <div class="hero__stats">
+                    <article class="stat-card">
+                        <h2>3+</h2>
+                        <p>Featured Projects</p>
+                    </article>
+                    <article class="stat-card">
+                        <h2>2+</h2>
+                        <p>Years Learning</p>
+                    </article>
+                    <article class="stat-card">
+                        <h2>6+</h2>
+                        <p>Core Skills</p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="hero__image">
+                <img src="images/my-portfolio.jpg" alt="Portrait of Charles Hangoma">
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="about">
-            <!-- TODO: Create about section
-                 Requirements:
-                 - Section heading (h2)
-                 - Profile image with alt text
-                 - Professional bio (150+ words)
-                 - Skills list
-                 - Use CSS Grid or Flexbox for layout
-            -->
-            <div class="container">
+        <section id="about" class="about section">
+            <div class="section-heading">
+                <p class="section-label">About</p>
                 <h2>About Me</h2>
-                <div class="about__content">
-                    <div class="about__image">
-                        <!-- TODO: Add your profile image -->
-                        <img src="images/profile-placeholder.jpg" alt="Profile photo of [Your Name]">
+            </div>
+
+            <div class="about__content">
+                <div class="about__image">
+                    <img src="images/my-portfolio.jpg" alt="Professional portrait of Charles Hangoma">
+                </div>
+
+                <div class="about__text">
+                    <p>
+                        I am a Software Engineering student with a growing passion for building useful, well-structured, and user-friendly digital solutions. Alongside my academic journey, I currently serve as the Operations Manager at <a href="https://www.sikaprime.com" target="_blank" rel="noopener noreferrer" class="inline-highlight-link"><strong>Sika Prime</strong></a>, where I work on improving workflows, organizing processes, and helping systems run more efficiently. This combination of operational experience and technical study has helped me develop a practical mindset toward solving real-world problems with technology.
+                    </p>
+
+                  <p>My interests strongly extend into web development, Linux customization, and software tools that improve productivity. I enjoy working with HTML, CSS, and related technologies to create responsive and accessible interfaces, while also exploring how systems work behind the scenes through Arch Linux customization, dotfiles, and workflow optimization. My goal is to grow into a skilled software engineer who can build solutions that are both functional and meaningful, combining technical development, business understanding, and creativity to solve real problems for people and organizations.</p>
+
+                   <h3>Core Skills</h3>
+<div class="skill-progress-list">
+    <div class="skill-progress-item">
+        <div class="skill-progress-header">
+            <span>HTML5</span>
+            <span>85%</span>
+        </div>
+        <div class="skill-progress-bar">
+            <div class="skill-progress-fill" style="width: 85%;"></div>
+        </div>
+    </div>
+
+    <div class="skill-progress-item">
+        <div class="skill-progress-header">
+            <span>CSS3</span>
+            <span>80%</span>
+        </div>
+        <div class="skill-progress-bar">
+            <div class="skill-progress-fill" style="width: 80%;"></div>
+        </div>
+    </div>
+
+    <div class="skill-progress-item">
+        <div class="skill-progress-header">
+            <span>Responsive Design</span>
+            <span>78%</span>
+        </div>
+        <div class="skill-progress-bar">
+            <div class="skill-progress-fill" style="width: 78%;"></div>
+        </div>
+    </div>
+
+    <div class="skill-progress-item">
+        <div class="skill-progress-header">
+            <span>Linux</span>
+            <span>88%</span>
+        </div>
+        <div class="skill-progress-bar">
+            <div class="skill-progress-fill" style="width: 88%;"></div>
+        </div>
+    </div>
+
+    <div class="skill-progress-item">
+        <div class="skill-progress-header">
+            <span>Git</span>
+            <span>72%</span>
+        </div>
+        <div class="skill-progress-bar">
+            <div class="skill-progress-fill" style="width: 72%;"></div>
+        </div>
+    </div>
+
+    <div class="skill-progress-item">
+        <div class="skill-progress-header">
+            <span>Problem Solving</span>
+            <span>82%</span>
+        </div>
+        <div class="skill-progress-bar">
+            <div class="skill-progress-fill" style="width: 82%;"></div>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills section">
+            <div class="section-heading">
+                <p class="section-label">Skills</p>
+                <h2>Technical &amp; Professional Skills</h2>
+            </div>
+
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3>Linux System Administration</h3>
+                    <p>Arch Linux setup, customization, troubleshooting, and system management.</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Shell Scripting</h3>
+                    <p>Bash and Zsh scripting for automation, workflow improvement, and productivity.</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Operations Management</h3>
+                    <p>Improving business processes, team coordination, and practical workflow optimization.</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Web Development</h3>
+                    <p>Building responsive websites using HTML5, CSS3, and clean front-end structure.</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Forex Market Analysis</h3>
+                    <p>Studying market trends, technical indicators, and strategy-based decision making.</p>
+                </article>
+
+                <article class="skill-card">
+                    <h3>Git &amp; Version Control</h3>
+                    <p>Managing project versions, tracking changes, and organizing development workflow.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="projects section">
+            <div class="section-heading">
+                <p class="section-label">Projects</p>
+                <h2>Featured Projects</h2>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="images/linuxdotfile.png" alt="Screenshot of Arch Linux Dotfiles project">
                     </div>
-                    <div class="about__text">
+                    <div class="project-card__content">
+                        <h3>Arch Linux Dotfiles</h3>
                         <p>
-                            <!-- TODO: Write your professional bio (150+ words)
-                                 Include:
-                                 - Your background
-                                 - Your interests in web development
-                                 - Your goals
-                                 - What makes you unique
-                            -->
-                            [Your professional bio goes here. Write at least 150 words about yourself,
-                            your background, your passion for web development, and your goals.
-                            This is your opportunity to introduce yourself to potential employers or clients.]
+                            A repository of my personal Arch Linux configurations, including customized window management, terminal workflow improvements, and productivity-focused setup files.
                         </p>
-                        <h3>Skills</h3>
-                        <ul class="skills-list">
-                            <!-- TODO: Add your skills -->
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>JavaScript</li>
-                            <li>Responsive Design</li>
-                            <!-- Add more skills -->
-                        </ul>
+                        <div class="project-card__links">
+                            <a href="https://github.com/venmor/dusky-dotfiles.git" target="_blank" rel="noopener noreferrer" class="btn btn--small btn--primary">Dotfiles</a>
+                        </div>
                     </div>
-                </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="images/ops-dashboard.png" alt="Screenshot of Sika Prime Ops Dashboard concept">
+                    </div>
+                    <div class="project-card__content">
+                        <h3>Sika Prime Ops Dashboard</h3>
+                        <p>
+                            A conceptual internal dashboard designed to track operational activities, improve team coordination, and support better business visibility within Sika Prime.
+                        </p>
+                        <div class="project-card__links">
+                            <a href="#" class="btn btn--small btn--outline">Prototype</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="images/Forex-Algo-Trader.png" alt="Screenshot of Forex Algo-Trader concept">
+                    </div>
+                    <div class="project-card__content">
+                        <h3>Forex Algo-Trader</h3>
+                        <p>
+                            A Python-based concept in development for analyzing market trends and supporting trade decision-making using technical indicators and automation ideas.
+                        </p>
+                        <div class="project-card__links">
+                            <a href="#" class="btn btn--small btn--outline">Source</a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <!-- TODO: Create projects section
-                 Requirements:
-                 - Section heading (h2)
-                 - Minimum 3 project cards
-                 - Each card: image, title, description, link(s)
-                 - Use CSS Grid for card layout
-            -->
-            <div class="container">
-                <h2>My Projects</h2>
-                <div class="projects__grid">
-                    <!-- Project Card 1 -->
-                    <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project1-placeholder.jpg" alt="Screenshot of Project 1">
-                        <div class="project-card__content">
-                            <h3>Project Title 1</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
-                            </p>
-                            <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project Card 2 -->
-                    <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project2-placeholder.jpg" alt="Screenshot of Project 2">
-                        <div class="project-card__content">
-                            <h3>Project Title 2</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
-                            </p>
-                            <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project Card 3 -->
-                    <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project3-placeholder.jpg" alt="Screenshot of Project 3">
-                        <div class="project-card__content">
-                            <h3>Project Title 3</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
-                            </p>
-                            <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- TODO: Add more project cards if desired -->
-                </div>
+        <section id="contact" class="contact section">
+            <div class="section-heading">
+                <p class="section-label">Contact</p>
+                <h2>Get In Touch</h2>
             </div>
-        </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact">
-            <!-- TODO: Create contact section
-                 Requirements:
-                 - Section heading (h2)
-                 - Contact form with:
-                   - Name field (required)
-                   - Email field (required, type="email")
-                   - Message textarea (required)
-                   - Submit button
-                 - All inputs must have associated labels
-                 - Use HTML5 validation attributes
-            -->
-            <div class="container">
-                <h2>Contact Me</h2>
-                <form class="contact__form" action="#" method="POST">
+            <div class="contact__content">
+                <div class="contact__info">
+                    <article class="contact-card">
+                        <h3>Email</h3>
+                        <p>charleshangoma@example.com</p>
+                    </article>
+
+                    <article class="contact-card">
+                        <h3>Location</h3>
+                        <p>Lusaka, Zambia</p>
+                    </article>
+
+                    <article class="contact-card">
+                        <h3>GitHub</h3>
+                        <p>github.com/venmor</p>
+                    </article>
+                </div>
+
+                <form class="contact-form" action="#" method="post">
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name">Full Name</label>
                         <input
                             type="text"
                             id="name"
                             name="name"
                             required
-                            placeholder="Your Name"
                             minlength="2"
+                            placeholder="Your full name"
                         >
                     </div>
+
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email">Email Address</label>
                         <input
                             type="email"
                             id="email"
@@ -213,49 +289,45 @@
                             placeholder="your.email@example.com"
                         >
                     </div>
+
                     <div class="form-group">
                         <label for="subject">Subject</label>
                         <input
                             type="text"
                             id="subject"
                             name="subject"
-                            placeholder="What is this regarding?"
+                            placeholder="What would you like to discuss?"
                         >
                     </div>
+
                     <div class="form-group">
                         <label for="message">Message</label>
                         <textarea
                             id="message"
                             name="message"
+                            rows="6"
                             required
-                            rows="5"
-                            placeholder="Your message..."
                             minlength="10"
+                            placeholder="Write your message here"
                         ></textarea>
                     </div>
+
                     <button type="submit" class="btn btn--primary">Send Message</button>
                 </form>
             </div>
+          
+        </section>
+
+        <section>
+            <footer class="site-footer">
+                <p>&copy; 2026 Charles Hangoma. All rights reserved.</p>
+                <ul class="footer-social-links">
+                    <li><a href="https://www.linkedin.com/in/charles-hangoma-b551482a7/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://github.com/venmor" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://web.facebook.com/charlie.hangoma" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                </ul>
+            </footer>
         </section>
     </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <!-- TODO: Create footer
-             Requirements:
-             - Copyright notice
-             - Social media links (optional)
-             - Back to top link (optional)
-        -->
-        <div class="container">
-            <p>&copy; 2025 [Your Name]. All rights reserved.</p>
-            <nav class="footer__social">
-                <!-- TODO: Add your social media links -->
-                <a href="#" aria-label="GitHub">GitHub</a>
-                <a href="#" aria-label="LinkedIn">LinkedIn</a>
-                <a href="#" aria-label="Twitter">Twitter</a>
-            </nav>
-        </div>
-    </footer>
 </body>
 </html>
